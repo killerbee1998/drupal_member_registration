@@ -248,7 +248,7 @@ class MemberRegisterForm extends FormBase {
     $node->field_member_dob = $field['member_dob'];
     $node->field_member_pob = $field['member_pob'];
 
-    if ($form_state->getValue('member_rollno') === "Bangladeshi") {
+    if ($form_state->getValue('member_nationality') === "Bangladeshi") {
       $node->field_member_nationality = $field['member_nationality'];
     } else {
       $node->field_member_nationality = $field['member_othernationality'];
@@ -260,37 +260,5 @@ class MemberRegisterForm extends FormBase {
 
     $node->save();
 
-    // $conn = Database::getConnection();
-
-    // $field = $form_state->getValues();
-
-    // $fields = [];
-
-    // node->field_member_type"] = $field['member_type'];
-    // node->field_member_renewal"] = $field['member_renewal'];
-    // node->field_member_category"] = $field['member_category'];
-    // node->field_member_prefix"] = $field['memberprefixe'];
-    // node->field_member_surname"] = $field['member_surname'];
-    // node->field_member_givenname"] = $field['member_givenname'];
-    // node->field_member_address"] = $field['member_address'];
-    // node->field_member_email"] = $field['member_email'];
-    // node->field_member_mobile"] = $field['member_mobile'];
-    // node->field_member_telephone"] = $field['member_telephone'];
-    // node->field_member_dob"] = $field['member_bedob'];
-    // node->field_member_pob"] = $field['member_pob'];
-
-    // if ($form_state->getValue('member_rollno') === "Bangladeshi") {
-    //   node->field_member_nationality"] = $field['member_nationality'];
-    // } else {
-    //   node->field_member_nationality"] = $field['member_othernationality'];
-    // }
-
-
-    // node->field_member_occupation"] = $field['member_occupation'];
-    // node->field_member_motivation"] = $field['member_motivation'];
-
-    // $conn->insert('members')->fields($fields)->execute();
-    // \Drupal::messenger()->addMessage($this->t('The Student data has been succesfully saved'));
-    // \Drupal::logger('member_registration')->error($form_state->getValue('member_type'));
   }
 }
