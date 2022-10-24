@@ -1,0 +1,143 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function member_registration_schema() {
+  $schema['members'] = array(
+    'description' => 'The table for storing the members data.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for member',
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ),
+
+      'member_type' => array(
+        'description' => 'member type',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_renewal' => array(
+        'description' => 'member renewal',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_category' => array(
+        'description' => 'member category',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_prefix' => array(
+        'description' => 'refer to the member as',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_surname' => array(
+        'description' => 'member surname .',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_givenname' => array(
+        'description' => 'member given name',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_address' => array(
+        'description' => 'member address',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_email' => array(
+        'description' => 'member email',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_mobile' => array(
+        'description' => 'member mobile number',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_telephone' => array(
+        'description' => 'member telephone number',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_dob' => array(
+        'description' => 'member date of birth',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_pob' => array(
+        'description' => 'member place of birth',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_nationality' => array(
+        'description' => 'member nationality',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_occupation' => array(
+        'description' => 'member occupaiton',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+      'member_motivation' => array(
+        'description' => 'member motivation',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}

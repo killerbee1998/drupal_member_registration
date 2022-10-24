@@ -1,0 +1,8 @@
+member.content:
+  path: '/member-registration'
+  defaults:
+    _form: '\Drupal\member_registration\Form\MemberRegisterForm'
+    _title: 'Member Registration Form'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
